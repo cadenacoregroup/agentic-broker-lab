@@ -1,0 +1,12 @@
+# The "may ever" layer: identity-based ceilings.
+# In Phase 3 this is replaced by Entra Agent ID + access packages.
+agents:
+  invoice-agent-01:
+    sponsor: maria@cadenacore.dev
+    allowed_task_classes: [invoice_analysis, ledger_posting]
+    resource_ceiling: ["erp/invoices:read", "erp/ledger:post"]
+users:
+  maria@cadenacore.dev:
+    rights: ["erp/invoices:read", "erp/ledger:post"]
+  intern@cadenacore.dev:
+    rights: ["erp/invoices:read"]   # cannot delegate ledger posting

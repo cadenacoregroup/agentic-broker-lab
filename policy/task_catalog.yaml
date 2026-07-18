@@ -1,0 +1,14 @@
+# The task-to-permission catalog: the "may now" layer.
+# Each task class maps a declared intent to the exact grants it requires.
+# This artifact is the genuinely new thing — no IdP ships it.
+task_classes:
+  invoice_analysis:
+    description: Read and analyze invoices for a declared period
+    grants: ["erp/invoices:read"]
+    ttl_seconds: 600
+    approval_required: false
+  ledger_posting:
+    description: Post a ledger entry (irreversible verb)
+    grants: ["erp/ledger:post"]
+    ttl_seconds: 300
+    approval_required: true   # human-in-the-loop gate
