@@ -4,8 +4,12 @@ A minimal, working prototype of **runtime authorization for AI agents**: the
 layer between agent runtimes and enterprise resources that turns a declared
 task into a short-lived, narrowly-scoped, fully-attributed credential.
 
-Companion code for the essay series starting with
+Companion code for the paper **"Runtime Authorization for AI Agents"**
+(Cadena Core Group, July 2026; DOI
+[10.5281/zenodo.21585832](https://doi.org/10.5281/zenodo.21585832)) and the
+essay series starting with
 *"Your Agents Don't Have an Authentication Problem. They Have an Authorization Problem."*
+Paper and essays: [cadenacoregroup.com/research](https://cadenacoregroup.com/research/).
 
 ## The idea in one sentence
 
@@ -33,6 +37,8 @@ Phase 0 mocks the IdP (`idp/issue.py`). Phase 1 swaps it for Entra ID
 (JWKS validation + on-behalf-of token exchange) — nothing downstream changes.
 
 ## Quickstart
+
+Requires Python 3.10+.
 
 ```bash
 pip install -r requirements.txt
